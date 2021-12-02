@@ -1,7 +1,23 @@
-import '../styles/globals.css'
+import React from "react";
+import App from "next/app";
+import Main from "../layouts/main";
+import "../styles/nav.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+class Layout extends React.Component {
+  render() {
+    const { children } = this.props;
+    return <div>{children}</div>;
+  }
 }
 
-export default MyApp
+export default class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <Layout>
+        <Main />
+        <Component {...pageProps} />
+      </Layout>
+    );
+  }
+}
