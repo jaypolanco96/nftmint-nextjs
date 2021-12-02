@@ -1,8 +1,41 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../images/lotus.png";
+import React, { useEffect } from "react";
 
 export default function Main() {
+  useEffect(() => {
+    if (typeof window.ethereum !== "undefined") {
+      console.log("MetaMask is installed!");
+      getAccount();
+    }
+    const ethereumButton = document.querySelector(".enableEthereumButton");
+    const walletnumber = document.getElementById("walletnumber");
+
+    ethereumButton.addEventListener("click", () => {
+      getAccount();
+    });
+
+    async function getAccount() {
+      const ethereum = window.ethereum;
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      const account = accounts[0];
+      walletnumber.innerHTML =
+        account[0] +
+        account[1] +
+        account[2] +
+        account[3] +
+        account[4] +
+        account[5] +
+        "..." +
+        account[38] +
+        account[39] +
+        account[40] +
+        account[41];
+    }
+  }, []);
   return (
     <div>
       <section>
@@ -16,7 +49,15 @@ export default function Main() {
               width={70}
             />
           </Link>
+
           <ul>
+            <li>
+              <Link href="/">
+                <button id="unlockbutton" className="enableEthereumButton">
+                  <span id="walletnumber">Unlock Wallet</span>
+                </button>
+              </Link>
+            </li>
             <li>
               <Link href="/">Home</Link>
             </li>

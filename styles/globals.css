@@ -34,6 +34,23 @@ header {
   align-items: center;
 }
 
+#unlockbutton {
+  height: 30px;
+  width: 140px;
+  color: #000;
+  background-color: #ffc0cb;
+  cursor: pointer;
+  border-radius: 25px;
+  border-style: none;
+}
+
+#unlockbutton:hover {
+  color: #4b4b4b;
+}
+#unlockbutton:hover {
+  color: #4b4b4b;
+}
+
 header ul {
   position: relative;
   display: flex;
