@@ -12,8 +12,8 @@ export default function Main() {
               position="relative"
               src={logo}
               alt="logo"
-              height={65}
-              width={80}
+              height={50}
+              width={70}
             />
           </Link>
           <ul>

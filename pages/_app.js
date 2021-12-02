@@ -1,7 +1,7 @@
 import React from "react";
 import App from "next/app";
 import Main from "../layouts/main";
-import "../styles/nav.css";
+import "../styles/globals.css";
 
 class Layout extends React.Component {
   render() {
