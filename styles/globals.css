@@ -141,6 +141,7 @@ h1 {
 }
 
 footer {
+  color: #8d8d8d;
   height: 250px;
   background-color: #ffc0cb;
   display: flex;
