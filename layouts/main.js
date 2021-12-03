@@ -6,8 +6,7 @@ import React, { useEffect } from "react";
 export default function Main() {
   useEffect(() => {
     if (typeof window.ethereum !== "undefined") {
-      console.log("MetaMask is installed!");
-      getAccount();
+      console.log("EVM Wallet is installed!");
     }
     const ethereumButton = document.querySelector(".enableEthereumButton");
     const walletnumber = document.getElementById("walletnumber");
