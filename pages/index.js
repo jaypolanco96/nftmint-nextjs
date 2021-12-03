@@ -107,6 +107,9 @@ export default function Home() {
           </Avatar>
         </Stack>
       </div>
+      <footer>
+        <h2>Mystical Lotus Photograph	&copy;</h2>
+      </footer>
     </div>
   );
 }

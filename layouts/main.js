@@ -52,11 +52,9 @@ export default function Main() {
 
           <ul>
             <li>
-              <Link href="/">
-                <button id="unlockbutton" className="enableEthereumButton">
-                  <span id="walletnumber">Unlock Wallet</span>
-                </button>
-              </Link>
+              <button id="unlockbutton" className="enableEthereumButton">
+                <span id="walletnumber">Connect Wallet</span>
+              </button>
             </li>
             <li>
               <Link href="/">Home</Link>
