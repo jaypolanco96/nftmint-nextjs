@@ -84,7 +84,7 @@ header ul li a {
 .content .textBox {
   position: relative;
   max-width: 600px;
-  margin-right: 300px;
+  margin-right: 75px;
 }
 
 .content .textBox h2 {
@@ -93,6 +93,14 @@ header ul li a {
   line-height: 0.1rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.content .imgBox {
+  display: flex;
+}
+
+.card {
+  margin: 0 0 0 20px;
 }
 
 h1 {

@@ -12,6 +12,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import example from "../images/example.jpg";
+import iguana from "../images/iguana.jpg"
 import bg from "../images/bg.jpg"
 import sj from "../images/sj.jpg"
 import vb from "../images/vb.jpeg"
@@ -34,7 +35,7 @@ export default function Home() {
           <button id="mint">MINT</button>
         </div>
         <div className="imgBox">
-          <Card sx={{ maxWidth: 250 }}>
+          <Card className="card" sx={{ maxWidth: 250 }}>
             <CardActionArea>
               <CardMedia height="140" alt="fire">
                 <Image src={example}></Image>
@@ -42,6 +43,22 @@ export default function Home() {
               <CardContent style={{ backgroundColor: "#FFC0CB" }}>
                 <Typography gutterBottom variant="h5" component="div">
                   Campfire
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+          <Card className="card" sx={{ maxWidth: 250 }}>
+            <CardActionArea>
+              <CardMedia height="140" alt="fire">
+                <Image src={iguana}></Image>
+              </CardMedia>
+              <CardContent style={{ backgroundColor: "#FFC0CB" }}>
+                <Typography gutterBottom variant="h5" component="div">
+                  Iguana
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
