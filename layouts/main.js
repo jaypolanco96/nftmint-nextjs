@@ -6,7 +6,8 @@ import React, { useEffect } from "react";
 export default function Main() {
   useEffect(() => {
     if (typeof window.ethereum !== "undefined") {
-      console.log("EVM Wallet is installed!");
+      console.log("EVM is installed!");
+      getAccount();
     }
     const ethereumButton = document.querySelector(".enableEthereumButton");
     const walletnumber = document.getElementById("walletnumber");
