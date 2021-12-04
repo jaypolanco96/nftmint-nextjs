@@ -568,7 +568,8 @@ export default function Home() {
         type: "function",
       },
     ];
-    const ADDRESS = "0xC7115D6603f48dd6311bB1B48f4B05A652aECa70";
+    const ADDRESS = "0x574870c372aA05d92C5D4cD3991E8Ed7B3F0cF95"
+
 
     async function callContract() {
       if (window.ethereum) {
