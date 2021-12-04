@@ -692,7 +692,7 @@ export default function Home() {
         </Stack>
       </div>
       <footer>
-        <h2>Mystical Lotus Photograph &copy;</h2>
+        <h2>Mystical Lotus Photography &copy;</h2>
       </footer>
     </div>
   );
