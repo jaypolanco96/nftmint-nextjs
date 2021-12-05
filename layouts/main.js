@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 
 export default function Main() {
   useEffect(() => {
-    if (typeof window.ethereum !== "undefined") {
+    if (window.ethereum) {
       console.log("EVM is installed!");
       getAccount();
     }
