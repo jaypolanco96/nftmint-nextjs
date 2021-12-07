@@ -23,7 +23,8 @@ import Link from "next/link";
 import logo from "../images/lotus.png";
 import "web3";
 import Web3 from "web3";
-import { FaInstagram, FaTwitter, FaFacebook, FaHeart } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
+import axios from "axios";
 
 export default function Home() {
   const ABI = [
@@ -72,7 +73,7 @@ export default function Home() {
       type: "function",
     },
   ];
-  const ADDRESS = "0xaeED834f3999a151C233E755d989D2f82C25aa10";
+  const ADDRESS = "0x3eA82a4e4De75c9B0B5E73818824Ac163d3ae363";
 
   useEffect(() => {
     // Web3 Browswer Detection
@@ -121,8 +122,14 @@ export default function Home() {
       window.web3 = new Web3(window.ethereum);
       const account = accounts[0];
       const contract = new web3.eth.Contract(ABI, ADDRESS);
+      const fetch = await axios.get("/api/hello");
+      const result = fetch.data;
+      const supply = await contract.methods.totalSupply().call();
+      console.log(supply)
+      const api = result[JSON.parse(supply)+1];
+      console.log(api + " Will Be Minted!")
       contract.methods
-        .safeMint(account, "https://api.npoint.io/c2d4fef38034d3941f0e")
+        .safeMint(account, api)
         .send({ from: account, value: "1000000000000000" });
     }
 
