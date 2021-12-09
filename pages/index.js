@@ -73,7 +73,7 @@ export default function Home() {
       type: "function",
     },
   ];
-  const ADDRESS = "0x3eA82a4e4De75c9B0B5E73818824Ac163d3ae363";
+  const ADDRESS = "0xbADc92003E5F29dfA644FE3709d7670C5E43DE00";
 
   useEffect(() => {
     // Web3 Browswer Detection
@@ -125,7 +125,7 @@ export default function Home() {
       const fetch = await axios.get("/api/hello");
       const result = fetch.data;
       const supply = await contract.methods.totalSupply().call();
-      console.log(supply)
+      console.log(supply + " NFTs have been minted!")
       const api = result[JSON.parse(supply)+1];
       console.log(api + " Will Be Minted!")
       contract.methods
